@@ -1,1 +1,185 @@
-<h1>Hello!</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InterScript - A New Programming Language</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide-icons.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .header {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1920x600') no-repeat center center/cover;
+            color: white;
+            padding: 100px 0;
+        }
+
+        .header h1 {
+            animation: fadeInDown 2s;
+        }
+
+        .header p {
+            animation: fadeInUp 2s;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        section.bg-light {
+            background-color: #f8f9fa;
+        }
+
+        footer {
+            background: #343a40;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        .dark-mode .bg-light {
+            background-color: #333333 !important;
+        }
+
+        .dark-mode .bg-dark {
+            background-color: #222222 !important;
+        }
+
+        .dark-mode .navbar {
+            background-color: #222222 !important;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">InterScript</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#features">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#installation">Installation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-secondary" id="toggle-dark-mode">
+                        <i class="lucide lucide-moon"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="header text-center">
+        <div class="container">
+            <h1 class="display-4">Welcome to InterScript</h1>
+            <p class="lead">A new programming language for seamless backend and frontend integration.</p>
+        </div>
+    </header>
+
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center">About InterScript</h2>
+            <p class="text-center">InterScript is designed to bridge the gap between backend and frontend development, offering a seamless and efficient way to create web applications.</p>
+        </div>
+    </section>
+
+    <section id="features" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">Features</h2>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <i class="lucide lucide-code" style="font-size: 48px;"></i>
+                    <h3>Easy Integration</h3>
+                    <p>Integrate your backend and frontend effortlessly with InterScript.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="lucide lucide-github" style="font-size: 48px;"></i>
+                    <h3>Open Source</h3>
+                    <p>Fully open source, allowing the community to contribute and create libraries.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="lucide lucide-websocket" style="font-size: 48px;"></i>
+                    <h3>WebSocket Support</h3>
+                    <p>Native WebSocket support for real-time communication.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="installation" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Installation</h2>
+            <p class="text-center">To install InterScript, follow the instructions below:</p>
+            <pre class="bg-dark text-white p-3">python main.py inter install &lt;library-name&gt;</pre>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">Contact</h2>
+            <p class="text-center">For more information or to contribute, contact us at <a href="mailto:info@interscript.org">info@interscript.org</a>.</p>
+        </div>
+    </section>
+
+    <footer class="footer text-center">
+        <p>&copy; 2024 InterScript. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('toggle-dark-mode').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            var icon = this.querySelector('i');
+            if (document.body.classList.contains('dark-mode')) {
+                icon.classList.remove('lucide-moon');
+                icon.classList.add('lucide-sun');
+            } else {
+                icon.classList.remove('lucide-sun');
+                icon.classList.add('lucide-moon');
+            }
+        });
+    </script>
+</body>
+</html>
